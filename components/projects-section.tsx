@@ -15,9 +15,9 @@ const projects = [
     tags: ["SaaS", "Operations", "Product"],
   },
   {
-    name: "Enera Website",
-    url: "https://enera-website.lovable.app",
-    description: "The corporate website I designed and developed for Enera, an early-stage AI company.",
+    name: "Aleya Website",
+    url: "https://aleya-ai.lovable.app",
+    description: "The corporate website I designed and developed for Aleya, an early-stage AI company.",
     tags: ["Corporate", "AI", "Startup"],
   },
   {
