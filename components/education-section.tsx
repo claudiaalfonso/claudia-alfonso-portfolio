@@ -5,7 +5,7 @@ const education = [
     years: "2019 - 2020",
   },
   {
-    institution: "University College Cork (Cork, Ireland)",
+    institution: "University College Cork\n(Cork, Ireland)",
     degree: "Erasmus, Marketing",
     years: "2017 - 2018",
   },
@@ -27,7 +27,7 @@ export function EducationSection() {
           {education.map((edu, index) => (
             <div key={index} className="flex flex-col md:flex-row md:items-start gap-4">
               <div className="md:w-48 shrink-0">
-                <p className="text-sm text-foreground/80">{edu.institution}</p>
+                <p className="text-sm text-foreground/80 whitespace-pre-line">{edu.institution}</p>
                 <p className="text-xs text-muted-foreground">{edu.years}</p>
               </div>
               <div className="flex-1">
