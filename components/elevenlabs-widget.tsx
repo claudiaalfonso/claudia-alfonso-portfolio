@@ -20,20 +20,24 @@ declare global {
 export function ElevenLabsWidget() {
   const [signedUrl, setSignedUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchSignedUrl() {
       try {
         const response = await fetch("/api/elevenlabs/signed-url");
         const data = await response.json();
+        console.log("[v0] ElevenLabs API response:", response.status, data);
         if (response.ok && data.signed_url) {
           setSignedUrl(data.signed_url);
         } else {
-          setError(data.error || "Failed to get signed URL");
+          setError(data.error || `Failed: ${response.status}`);
         }
       } catch (err) {
         console.error("[v0] Failed to fetch signed URL:", err);
         setError("Network error");
+      } finally {
+        setLoading(false);
       }
     }
     fetchSignedUrl();
@@ -45,9 +49,14 @@ export function ElevenLabsWidget() {
         src="https://elevenlabs.io/convai-widget/index.js"
         strategy="afterInteractive"
       />
+      {loading && (
+        <div style={{ position: "fixed", bottom: 20, right: 20, background: "#333", color: "white", padding: 10, borderRadius: 8, zIndex: 9999 }}>
+          Loading voice agent...
+        </div>
+      )}
       {error && (
-        <div style={{ position: "fixed", bottom: 20, right: 20, background: "red", color: "white", padding: 10, borderRadius: 8, zIndex: 9999 }}>
-          ElevenLabs Error: {error}
+        <div style={{ position: "fixed", bottom: 20, right: 20, background: "#dc2626", color: "white", padding: 10, borderRadius: 8, zIndex: 9999 }}>
+          Voice Agent Error: {error}
         </div>
       )}
       {signedUrl && <elevenlabs-convai signed-url={signedUrl} />}
