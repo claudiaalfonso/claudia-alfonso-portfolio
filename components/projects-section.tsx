@@ -11,25 +11,25 @@ const projects = [
   {
     name: "Aleya Website",
     url: "https://aleya-ai.lovable.app",
-    description: "The corporate website I designed and developed for Aleya, an early-stage AI company.",
+    description: "I created the website, brand direction, and content strategy for Aleya, shaping how an early-stage AI company shows up online.",
     tags: ["Corporate", "AI", "Startup"],
   },
   {
     name: "Bramble AI",
     url: "https://bramble-diy-companion.lovable.app",
-    description: "An AI assistant that guides users through DIY projects step by step, complete with generated images.",
+    description: "I built the concept, storytelling, and product direction for an AI companion that guides users through DIY projects step by step.",
     tags: ["AI", "Consumer", "Product"],
   },
   {
     name: "Gravitas AI",
     url: "https://officeos.lovable.app",
-    description: "An all-in-one platform that helps office managers streamline daily operations.",
+    description: "I developed the positioning, brand narrative, and website experience for a product designed to simplify office operations.",
     tags: ["SaaS", "Operations", "Product"],
   },
   {
     name: "Murphy AI Careers",
     url: "https://voice-ai-careers.lovable.app",
-    description: "A careers page showcasing open roles and company culture for Murphy AI.",
+    description: "I designed the content, tone, and careers experience to showcase open roles and company culture for Murphy AI.",
     tags: ["Careers", "HR", "AI"],
   },
   {
@@ -86,6 +86,9 @@ export function ProjectsSection() {
             </Link>
           ))}
         </div>
+        <p className="mt-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          The strategy, copy, and brand thinking behind these projects are real and created by me. In a few cases, names or visuals are lightly disguised with placeholder assets because the original work is not public yet.
+        </p>
       </div>
     </section>
   );
