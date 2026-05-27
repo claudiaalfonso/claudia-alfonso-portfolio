@@ -9,16 +9,16 @@ const projects = [
     tags: ["AI", "Startup", "Product"],
   },
   {
-    name: "Gravitas AI",
-    url: "https://officeos.lovable.app",
-    description: "An all-in-one platform that helps office managers streamline daily operations.",
-    tags: ["SaaS", "Operations", "Product"],
-  },
-  {
     name: "Aleya Website",
     url: "https://aleya-ai.lovable.app",
     description: "The corporate website I designed and developed for Aleya, an early-stage AI company.",
     tags: ["Corporate", "AI", "Startup"],
+  },
+  {
+    name: "Gravitas AI",
+    url: "https://officeos.lovable.app",
+    description: "An all-in-one platform that helps office managers streamline daily operations.",
+    tags: ["SaaS", "Operations", "Product"],
   },
   {
     name: "Murphy AI Careers",
