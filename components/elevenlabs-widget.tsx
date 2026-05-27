@@ -1,8 +1,8 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect, useState, useCallback } from "react";
-import { Mic, MicOff, Loader2 } from "lucide-react";
+import { useCallback, useState } from "react";
+import { Mic, MicOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 declare global {
@@ -20,37 +20,14 @@ declare global {
 }
 
 export function ElevenLabsWidget() {
-  const [signedUrl, setSignedUrl] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchSignedUrl() {
-      try {
-        const response = await fetch("/api/elevenlabs/signed-url");
-        const data = await response.json();
-        if (response.ok && data.signed_url) {
-          setSignedUrl(data.signed_url);
-        } else {
-          setError(data.error || `Failed: ${response.status}`);
-        }
-      } catch (err) {
-        console.error("[v0] Failed to fetch signed URL:", err);
-        setError("Network error");
-      } finally {
-        setLoading(false);
-      }
-    }
-    fetchSignedUrl();
-  }, []);
-
   return (
     <>
       <Script
-        src="https://elevenlabs.io/convai-widget/index.js"
+        src="https://unpkg.com/@elevenlabs/convai-widget-embed"
         strategy="afterInteractive"
+        type="text/javascript"
       />
-      {signedUrl && <elevenlabs-convai signed-url={signedUrl} />}
+      <elevenlabs-convai agent-id="agent_6901kktavnemfmvt9t81437kafg5" />
     </>
   );
 }
@@ -59,40 +36,36 @@ export function TalkToAIButton() {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = useCallback(() => {
-    // Find the ElevenLabs widget and trigger it
     const widget = document.querySelector("elevenlabs-convai");
     if (widget) {
-      // The ElevenLabs widget listens for a custom "start-call" event
-      // or we can click the orb/avatar element to start the call
       const shadowRoot = (widget as HTMLElement).shadowRoot;
       if (shadowRoot) {
-        // Look for the main call button (usually has aria-label or specific class)
         const callButton = shadowRoot.querySelector('[aria-label*="call"], [aria-label*="Call"], [aria-label*="Start"], .call-button, .start-button') as HTMLButtonElement;
         if (callButton) {
           callButton.click();
-          setIsActive(!isActive);
+          setIsActive((value) => !value);
           return;
         }
-        // Try clicking the orb/avatar container which typically starts the call
+
         const orb = shadowRoot.querySelector('.orb, .avatar, [class*="orb"], [class*="avatar"]') as HTMLElement;
         if (orb) {
           orb.click();
-          setIsActive(!isActive);
+          setIsActive((value) => !value);
           return;
         }
-        // Fallback: click any visible interactive element
+
         const anyButton = shadowRoot.querySelector('button:not([aria-label*="mute"]):not([aria-label*="Mute"])') as HTMLButtonElement;
         if (anyButton) {
           anyButton.click();
-          setIsActive(!isActive);
+          setIsActive((value) => !value);
           return;
         }
       }
-      // Last fallback: click the widget container
+
       (widget as HTMLElement).click();
-      setIsActive(!isActive);
+      setIsActive((value) => !value);
     }
-  }, [isActive]);
+  }, []);
 
   return (
     <Button
