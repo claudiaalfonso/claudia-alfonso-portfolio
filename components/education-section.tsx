@@ -1,6 +1,6 @@
 const education = [
   {
-    institution: "Universitat Ramon Llull (Barcelona, Spain)",
+    institution: "Ramon Llull University (Barcelona, Spain)",
     degree: "Double Master, Marketing and Sales",
     years: "2019 - 2020",
   },
