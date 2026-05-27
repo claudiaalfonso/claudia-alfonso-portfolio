@@ -7,7 +7,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Claudia Alfonso | Talent Engineer & People Ops Systems',
+  title: 'Claudia Alfonso – My Portfolio',
   description: 'People Ops engineer with 5+ years bridging Talent and Systems. Built HRIS and ATS foundations, migrations, onboarding workflows, compliance automation, and hiring processes.',
   generator: 'v0.app',
 }
