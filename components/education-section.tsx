@@ -10,7 +10,7 @@ const education = [
     years: "2017 - 2018",
   },
   {
-    institution: "Universitat de Barcelona (Barcelona, Spain)",
+    institution: "University of Barcelona (Barcelona, Spain)",
     degree: "Communication and Cultural Industry",
     years: "2015 - 2019",
   },
