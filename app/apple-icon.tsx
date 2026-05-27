@@ -34,18 +34,17 @@ export default async function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'transparent',
+          background: 'rgba(0,0,0,0)',
         }}
       >
         <div
           style={{
-            width: '86%',
-            height: '86%',
+            width: '78%',
+            height: '78%',
             display: 'flex',
             overflow: 'hidden',
             background: '#b8c8c3',
             borderRadius: '9999px',
-            border: '4px solid rgba(255,255,255,0.88)',
           }}
         >
           <img
