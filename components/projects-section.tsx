@@ -21,12 +21,6 @@ const projects = [
     tags: ["AI", "Consumer", "Product"],
   },
   {
-    name: "Gravitas AI",
-    url: "https://officeos.lovable.app",
-    description: "I developed the positioning, brand narrative, and website experience for a product designed to simplify office operations.",
-    tags: ["SaaS", "Operations", "Product"],
-  },
-  {
     name: "Margot AI Careers",
     url: "https://margotai.lovable.app",
     description: "I designed the content, tone, and careers experience to showcase open roles and company culture for Margot AI.",
@@ -37,6 +31,12 @@ const projects = [
     url: "https://oliver-pippa-boutique.lovable.app",
     description: "A complete e-commerce store integrated with Shopify, built for a boutique retail brand.",
     tags: ["E-commerce", "Shopify", "Web"],
+  },
+  {
+    name: "Gravitas AI",
+    url: "https://officeos.lovable.app",
+    description: "I developed the positioning, brand narrative, and website experience for a product designed to simplify office operations.",
+    tags: ["SaaS", "Operations", "Product"],
   },
   {
     name: "AIEC Community",
