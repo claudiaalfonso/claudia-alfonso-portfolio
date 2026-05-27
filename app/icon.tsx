@@ -32,21 +32,32 @@ export default async function Icon() {
           width: '100%',
           height: '100%',
           display: 'flex',
-          overflow: 'hidden',
-          background: '#b8c8c3',
-          borderRadius: '12%',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'transparent',
         }}
       >
-        <img
-          src={portraitSrc}
-          alt="Claudia Alfonso"
+        <div
           style={{
             width: '100%',
             height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center 24%',
+            display: 'flex',
+            overflow: 'hidden',
+            background: '#b8c8c3',
+            borderRadius: '9999px',
           }}
-        />
+        >
+          <img
+            src={portraitSrc}
+            alt="Claudia Alfonso"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center 24%',
+            }}
+          />
+        </div>
       </div>
     ),
     size,
