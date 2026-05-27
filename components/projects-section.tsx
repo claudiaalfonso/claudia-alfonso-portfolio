@@ -27,9 +27,9 @@ const projects = [
     tags: ["SaaS", "Operations", "Product"],
   },
   {
-    name: "Murphy AI Careers",
-    url: "https://voice-ai-careers.lovable.app",
-    description: "I designed the content, tone, and careers experience to showcase open roles and company culture for Murphy AI.",
+    name: "Margot AI Careers",
+    url: "https://margotai.lovable.app",
+    description: "I designed the content, tone, and careers experience to showcase open roles and company culture for Margot AI.",
     tags: ["Careers", "HR", "AI"],
   },
   {
