@@ -24,6 +24,22 @@ const experiences = [
     company: "Zynap",
     description:
       "Built the People function from scratch during a 2x scaling phase, implementing systems, success profiles, leveling frameworks, performance cycles, and org design in close partnership with the founders.",
+    more: {
+      intro: [
+        "Joined shortly after Zynap's Seed round to build the People foundation during a rapid scaling phase. After contributing across hiring, structure, and people operations, I decided to move on when it became clear the environment was not the right long-term fit.",
+        "Worked directly with founders to design the hiring strategy, org structure, and internal systems required to scale a high-performance team in a VC-backed environment.",
+      ],
+      accomplishments: [
+        "Defined the company's hiring strategy through a 2x growth phase, building the TA function from scratch and partnering closely with leadership on headcount planning and prioritization.",
+        "Installed the company's hiring infrastructure: success profiles, structured interviews, scorecards, and HM training to improve decision quality and consistency.",
+        "Built the TA operating layer, defining agency partnerships, recruiting tooling budget, pipeline instrumentation, and candidate communication SLAs.",
+        "Implemented Rippling as HRIS and ATS, creating automated workflows for onboarding, offboarding, device management, and internal approvals.",
+        "Designed key People architecture: comp and leveling frameworks, performance review cycles, and early career progression structures.",
+        "Partnered with leadership on org design, defining roles, team structures, and reporting lines during the scaling phase.",
+        "Helped establish the People and compliance foundations required for enterprise readiness, including GDPR processes and SOC 2 support via Vanta.",
+        "Contributed to employer branding by shaping how Zynap presents itself to attract top talent in AI and cybersecurity.",
+      ],
+    },
   },
   {
     period: "Apr 2024 - Sep 2025",
@@ -31,6 +47,21 @@ const experiences = [
     company: "Amenitiz",
     description:
       "Led talent acquisition through 2.5x company growth, including C-suite hiring, launching the Medellin hub, designing local onboarding flows, and integrating systems with HQ.",
+    more: {
+      intro: [
+        "Drove Amenitiz's global talent strategy and growth, helping build a culture of excellence in a fast-paced, high-growth environment while recruiting senior talent across markets.",
+        "I also built the employer brand from the ground up and worked to position Amenitiz as one of the top employers in Europe.",
+        "As Founding People Lead for the LATAM launch, I led the hiring, opening, and early setup of the company's newest office hub.",
+      ],
+      accomplishments: [
+        "Led a high-performing team of Talent Acquisition Partners, consistently attracting and securing top-tier talent across all levels during a 2.5x growth phase.",
+        "Spearheaded executive recruitment, successfully hiring C-suite leaders and department heads.",
+        "Built and launched Amenitiz's employer branding strategy from scratch, increasing market presence and candidate engagement.",
+        "Oversaw the opening of the LATAM office and market launch, expanding the company's global footprint and diversifying the talent pool.",
+        "Implemented a new ATS (Greenhouse) and NPS tool (Starred), streamlining recruiting operations and improving candidate experience.",
+        "Pioneered multiple cross-functional initiatives that delivered measurable business impact and operational efficiency.",
+      ],
+    },
   },
   {
     period: "Aug 2022 - Apr 2024",
@@ -66,7 +97,6 @@ export function ExperienceSection() {
   return (
     <section id="experience" className="py-16 border-t border-border">
       <div className="max-w-4xl mx-auto px-6">
-        {/* Freelance Section */}
         <p className="text-sm text-muted-foreground uppercase tracking-wider mb-8">
           Freelance
         </p>
@@ -92,7 +122,6 @@ export function ExperienceSection() {
           ))}
         </div>
 
-        {/* Employment History */}
         <p className="text-sm text-muted-foreground uppercase tracking-wider mb-8">
           Experience
         </p>
@@ -115,6 +144,29 @@ export function ExperienceSection() {
                 <p className="text-foreground/80 text-sm leading-relaxed">
                   {exp.description}
                 </p>
+                {exp.more && (
+                  <details className="group mt-4">
+                    <summary className="cursor-pointer list-none text-sm text-primary transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
+                      More -&gt;
+                    </summary>
+                    <div className="mt-4 space-y-4 text-sm leading-relaxed text-foreground/80">
+                      {exp.more.intro.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                      <div className="space-y-3">
+                        <p className="text-foreground font-medium">Key accomplishments</p>
+                        <ul className="space-y-2 text-foreground/80">
+                          {exp.more.accomplishments.map((item) => (
+                            <li key={item} className="flex gap-3">
+                              <span className="mt-[0.45rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </details>
+                )}
               </div>
             </div>
           ))}
