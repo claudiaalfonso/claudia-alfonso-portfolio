@@ -16,7 +16,7 @@ const projects = [
   },
   {
     name: "Bramble AI",
-    url: "https://bramble-diy-companion.lovable.app",
+    url: "https://bramble-ai.lovable.app",
     description: "I built the concept, storytelling, and product direction for an AI companion that guides users through DIY projects step by step.",
     tags: ["AI", "Consumer", "Product"],
   },
