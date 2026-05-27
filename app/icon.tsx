@@ -39,12 +39,13 @@ export default async function Icon() {
       >
         <div
           style={{
-            width: '100%',
-            height: '100%',
+            width: '86%',
+            height: '86%',
             display: 'flex',
             overflow: 'hidden',
             background: '#b8c8c3',
             borderRadius: '9999px',
+            border: '1px solid rgba(255,255,255,0.85)',
           }}
         >
           <img
