@@ -15,6 +15,12 @@ const projects = [
     tags: ["Corporate", "AI", "Startup"],
   },
   {
+    name: "Bramble AI",
+    url: "https://bramble-diy-companion.lovable.app",
+    description: "An AI assistant that guides users through DIY projects step by step, complete with generated images.",
+    tags: ["AI", "Consumer", "Product"],
+  },
+  {
     name: "Gravitas AI",
     url: "https://officeos.lovable.app",
     description: "An all-in-one platform that helps office managers streamline daily operations.",
@@ -31,12 +37,6 @@ const projects = [
     url: "https://oliver-pippa-boutique.lovable.app",
     description: "A complete e-commerce store integrated with Shopify, built for a boutique retail brand.",
     tags: ["E-commerce", "Shopify", "Web"],
-  },
-  {
-    name: "Bramble AI",
-    url: "https://bramble-diy-companion.lovable.app",
-    description: "An AI assistant that guides users through DIY projects step by step, complete with generated images.",
-    tags: ["AI", "Consumer", "Product"],
   },
   {
     name: "AIEC Community",
