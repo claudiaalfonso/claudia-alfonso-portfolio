@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { TalkToAIButton } from "@/components/elevenlabs-widget";
 
 export function HeroSection() {
   return (
@@ -23,7 +22,6 @@ export function HeroSection() {
               <h1 className="text-3xl md:text-4xl font-semibold text-foreground">
                 {"Hey, I'm Claudia 👋"}
               </h1>
-              <TalkToAIButton />
             </div>
             <p className="text-muted-foreground text-xl md:text-2xl mb-6">{"happy you're here."}</p>
             <div className="text-foreground/90 leading-relaxed mb-8 max-w-xl space-y-4">
