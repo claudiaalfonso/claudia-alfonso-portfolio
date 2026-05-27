@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -35,7 +35,7 @@ export function HeroSection() {
                 Reach out if something sparks an idea.
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 text-sm">
+            <div className="flex flex-wrap items-center gap-4 text-sm">
               <Link
                 href="#projects"
                 className="inline-flex items-center gap-2 text-primary hover:underline underline-offset-4"
@@ -43,18 +43,13 @@ export function HeroSection() {
                 View Projects <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="mailto:claudia.alfonso30@gmail.com"
-                className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-              >
-                claudia.alfonso30@gmail.com
-              </Link>
-              <Link
                 href="https://linkedin.com/in/hello-claudia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="LinkedIn"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-secondary/60 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               >
-                LinkedIn
+                <Linkedin className="h-4 w-4" />
               </Link>
             </div>
           </div>
