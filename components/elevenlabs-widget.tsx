@@ -62,21 +62,37 @@ export function TalkToAIButton() {
     // Find the ElevenLabs widget and trigger it
     const widget = document.querySelector("elevenlabs-convai");
     if (widget) {
-      // Try to find the button inside the shadow DOM or trigger the widget
+      // The ElevenLabs widget listens for a custom "start-call" event
+      // or we can click the orb/avatar element to start the call
       const shadowRoot = (widget as HTMLElement).shadowRoot;
       if (shadowRoot) {
-        const button = shadowRoot.querySelector("button");
-        if (button) {
-          button.click();
-          setIsActive(true);
+        // Look for the main call button (usually has aria-label or specific class)
+        const callButton = shadowRoot.querySelector('[aria-label*="call"], [aria-label*="Call"], [aria-label*="Start"], .call-button, .start-button') as HTMLButtonElement;
+        if (callButton) {
+          callButton.click();
+          setIsActive(!isActive);
+          return;
+        }
+        // Try clicking the orb/avatar container which typically starts the call
+        const orb = shadowRoot.querySelector('.orb, .avatar, [class*="orb"], [class*="avatar"]') as HTMLElement;
+        if (orb) {
+          orb.click();
+          setIsActive(!isActive);
+          return;
+        }
+        // Fallback: click any visible interactive element
+        const anyButton = shadowRoot.querySelector('button:not([aria-label*="mute"]):not([aria-label*="Mute"])') as HTMLButtonElement;
+        if (anyButton) {
+          anyButton.click();
+          setIsActive(!isActive);
           return;
         }
       }
-      // Fallback: dispatch a click event on the widget itself
-      widget.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-      setIsActive(true);
+      // Last fallback: click the widget container
+      (widget as HTMLElement).click();
+      setIsActive(!isActive);
     }
-  }, []);
+  }, [isActive]);
 
   return (
     <Button
