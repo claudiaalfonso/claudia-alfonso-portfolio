@@ -1,9 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Mic } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { TalkToAIButton } from "@/components/elevenlabs-widget";
 
 export function HeroSection() {
   return (
@@ -25,20 +23,7 @@ export function HeroSection() {
               <h1 className="text-3xl md:text-4xl font-semibold text-foreground">
                 {"Hey, I'm Claudia 👋"}
               </h1>
-              <Button
-                variant="outline"
-                size="sm"
-                className="w-fit gap-2 border-primary/30 hover:bg-primary/5"
-                onClick={() => {
-                  const widget = document.querySelector("elevenlabs-convai");
-                  if (widget) {
-                    (widget as HTMLElement).click();
-                  }
-                }}
-              >
-                <Mic className="w-4 h-4" />
-                Talk to my AI clone
-              </Button>
+              <TalkToAIButton />
             </div>
             <p className="text-muted-foreground text-xl md:text-2xl mb-6">{"happy you're here."}</p>
             <div className="text-foreground/90 leading-relaxed mb-8 max-w-xl space-y-4">
