@@ -5,7 +5,7 @@ const projects = [
   {
     name: "Migo AI",
     url: "https://usemigo.ai",
-    description: "My own early-stage venture exploring intelligent automation and AI-driven user assistance.",
+    description: "Migo helps lean hiring teams keep candidate conversations alive and move strong people forward faster.",
     tags: ["AI", "Startup", "Product"],
   },
   {
