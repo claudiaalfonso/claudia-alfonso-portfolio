@@ -30,7 +30,7 @@ const coreDomains = [
 const languages = [
   { name: "Spanish", level: "Native" },
   { name: "Catalan", level: "Native" },
-  { name: "English", level: "C1" },
+  { name: "English", level: "Fluent" },
   { name: "Italian", level: "Professional" },
 ];
 
