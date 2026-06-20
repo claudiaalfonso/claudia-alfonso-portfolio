@@ -19,6 +19,13 @@ const freelance = [
 
 const experiences = [
   {
+    period: "Jun 2026 - Present",
+    role: "People & Talent Lead",
+    company: "Xata",
+    description:
+      "Leading People and Talent across hiring, people operations, and team foundations in my current role.",
+  },
+  {
     period: "Oct 2025 - Apr 2026",
     role: "Head of Talent and Culture",
     company: "Zynap",
