@@ -3,6 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
+    name: "Conuco",
+    url: "https://conuco.lovable.app/",
+    description:
+      "I created the concept and emergency response experience for a mutual-aid platform built after the 2026 earthquake in Venezuela. The current prototype uses mocked data while the live map layer is still being developed.",
+    tags: ["Crisis Response", "Community", "Product"],
+  },
+  {
     name: "Migo AI",
     url: "https://usemigo.ai",
     description: "A real agentic hiring project I built and fully deployed. Migo helps lean hiring teams keep candidate conversations alive and move strong people forward faster.",
