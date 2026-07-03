@@ -6,7 +6,7 @@ const projects = [
     name: "Conuco",
     url: "https://conuco.lovable.app/",
     description:
-      "I created the concept and emergency response experience for a mutual-aid platform built after the 2026 earthquake in Venezuela. The current prototype uses mocked data while the live map layer is still being developed.",
+      "Created the concept for a mutual-aid platform responding to the 2026 earthquake in Venezuela. The current prototype uses mocked data.",
     tags: ["Crisis Response", "Community", "Product"],
   },
   {
