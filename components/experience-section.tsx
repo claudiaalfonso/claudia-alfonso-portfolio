@@ -5,7 +5,7 @@ const freelance = [
     role: "HappyRobot",
     company: "Silicon Valley",
     description:
-      "Contributing to a Y Combinator-backed startup that builds AI-powered automation for logistics and supply chain operations.",
+      "Full-time experience at a Y Combinator-backed startup building AI-powered automation for logistics and supply chain operations.",
     badge: "YC S23",
   },
   {
@@ -105,7 +105,7 @@ export function ExperienceSection() {
     <section id="experience" className="py-16 border-t border-border">
       <div className="max-w-4xl mx-auto px-6">
         <p className="text-sm text-muted-foreground uppercase tracking-wider mb-8">
-          Freelance
+          Other projects
         </p>
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           {freelance.map((item, index) => (
