@@ -1,5 +1,10 @@
 const education = [
   {
+    institution: "UCLA Extension",
+    degree: "HR Management Certificate",
+    years: "2026 - Present",
+  },
+  {
     institution: "Ramon Llull University (Barcelona, Spain)",
     degree: "Double Master, Marketing and Sales",
     years: "2019 - 2020",
