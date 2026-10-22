@@ -9,7 +9,7 @@ export function HeroSection() {
         <div className="flex flex-col md:flex-row gap-12 items-start">
           <div className="relative shrink-0">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/31E90E58-0693-4B00-8891-03A4811FEB4A.JPG-54w7w8Mfsd8PG5pDcXZfrsCS1l6KR7.jpeg"
+              src="/claudia-portrait.jpeg"
               alt="Claudia Alfonso"
               width={160}
               height={160}
